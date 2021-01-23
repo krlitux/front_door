@@ -32,13 +32,6 @@ variable location {
   type        = list(string)
 }
 
-### Private Variables
-variable azfd_session_affinity {
-  description = "Permite dirigir el tráfico subsiguiente de una sesión de usuario al mismo backend de la aplicación."
-  type        = bool
-  default     = false
-}
-
 variable azfd_backend {
   description = "Variables para backend: host_name, host_header, http_port, https_port, priority, weight"
   type = list(object({
