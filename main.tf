@@ -44,6 +44,7 @@ resource "azurerm_frontdoor" "azfd" {
   frontend_endpoint {
     name                              = local.azfd_name
     host_name                         = local.azfd_frontend_name
+    session_affinity_enabled          = var.azfd_session_affinity
     custom_https_provisioning_enabled = false
   }
 }
