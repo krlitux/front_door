@@ -33,6 +33,12 @@ variable location {
 }
 
 ### Private Variables
+variable azfd_backend_latency {
+  description = "Tiempo en milisegundos que frontdoor tomará en cuenta para considerar un backend saludable."
+  type        = number
+  default     = 0
+}
+
 variable azfd_session_affinity {
   description = "Permite dirigir el tráfico subsiguiente de una sesión de usuario al mismo backend de la aplicación."
   type        = bool

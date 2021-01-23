@@ -15,7 +15,8 @@ resource "azurerm_frontdoor" "azfd" {
   }
 
   backend_pool_load_balancing {
-    name = local.load_balancing_name
+    name                            = local.load_balancing_name
+    additional_latency_milliseconds = var.azfd_backend_latency
   }
 
   backend_pool_health_probe {
